@@ -376,7 +376,7 @@ class DPlayer {
             // https://github.com/Dash-Industry-Forum/dash.js
             case 'dash':
                 if (dashjs) {
-                    dashjs.MediaPlayer().create().initialize(video, video.src, false);
+                    dashjs.MediaPlayer().create().initialize(video, video.src, this.options.autoplay);
                 }
                 else {
                     this.notice('Error: Can\'t find dashjs.');
